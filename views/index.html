@@ -12,6 +12,28 @@
         
         {{#messages}}<b>{{name}}:  {{ message }} </b>{{/messages}} 
         
+        <table border="1">
+                <tr>
+                    <td>Пользователь</td>
+                    <td>Сообщение</td>
+                </tr> 
+                {{#messages}}
+                <tr>
+                    <td>{{ user }}</td>
+                    <td>{{ message }}</td>
+                </tr> 
+                {{/messages}} 
+                
+        </table>
+        <br /><br />
+        <form method="POST" action="/guest">
+            <input name="user" />
+            <br /><br />
+            <textarea name="message"></textarea>
+            <br /><br />
+            <input type="submit" value="Save" />
+        </form>
+        
          
     </body>
 
